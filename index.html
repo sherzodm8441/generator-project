@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Template</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <script>
+    $(function() {
+
+      $('button').click(function() {
+
+
+        var company = $('#company').val();
+        var address = $('#address').val();
+        var name = $('name').val();
+        var number = $('#number').val();
+        var textColor = $('#colorT').val();
+        var backgroundColor = $('#colorB').val();
+        var link = $('#link').val();
+        var test = company + address + name + number + textColor
+        var link1 = "url(" + link + ")"
+
+
+        $('#front').css('background-color', backgroundColor);
+        $('#front').css('color', textColor);
+        $('#img').css('background-image', link1);
+        $('#p1').html(test);
+        $('h1').html(company);
+
+      })
+
+    });
+  </script>
+</head>
+
+<body>
+  <h1>Business Card Generator</h1>
+
+  Name of company: <input id="company" placeholder="ex: Microsoft"><br>
+  Adress: <input id="address" placeholder="ex: 21 Jump St"><br>
+  Name: <input id="name" placeholder="ex: John Doe"><br>
+  Number: <input id="number" placeholder="ex:347-638-nevagonhappen"><br>
+  Color of text: <input id="colorT" placeholder="white"><br> 
+  Color of background: <input id="colorB" placeholder="ex: pink"><br>
+  Link to an image: <input id="link" placeholder="ex:www.some.thing/"><br>
+  <select>
+    <option value="Impact">Impact</option>
+    <option value="Arial">Arial</option>
+    <option value="Helvetica">Helvetica</option>
+    <option value="Times New Roman" selected>Times New Roman</option>
+    <option value="Times">Times</option>
+    <option value="Courier New">Courier New</option>
+    <option value="Courier">Courier</option>
+    <option value="Verdana">Verdana</option>
+    <option value="Georgia">Georgia</option>
+    <option value="Palatino">Palatino</option>
+    <option value="Garamond">Garamond</option>
+    <option value="Bookman">Bookman</option>
+    <option value="Comic Sans MS">Comic Sans MS</option>
+    <option value="Trebuchet MS">Trebuchet MS</option>
+    <option value="Arial Black">Arial Black</option>
+    
+  </select> 
+  
+  <button>Generate My business card</button>
+
+  <div id="front">
+
+    <h1></h1>
+    <div id="img"></div>
+    
+
+    <p id='p1'></p>
+
+  </div>
+
+  <div id="back">
+
+  </div>
+
+
+  <p id='p2'></p>
+
+
+
+
+
+</body>
+
+</html>
