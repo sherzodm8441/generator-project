@@ -19,17 +19,26 @@
         var textColor = $('#colorT').val();
         var backgroundColor = $('#colorB').val();
         var link = $('#link').val();
-        var test = company + address + name + number + textColor
+        
         var link1 = "url(" + link + ")"
-
+        var font = $('#font').val();
+        var textSize = (25 - (company.length * .5)) + "px"
+        
 
         $('#front').css('background-color', backgroundColor);
         $('#front').css('color', textColor);
-        $('#img').css('background-image', link1);
-        $('#p1').html(test);
-        $('h1').html(company);
+        $('#front').css('font-family', font);
+         $('#front').css('font-size', '3vw');
+         
+         $('#header').css('font-size', textSize);
+        
+        
+        $('#img').css('background-image', link1).css('background-size', 'cover').css('background-position', 'center').css('max-width', '50px').css('max-height', '50px');
+        
+        $('#cardh1').html(company).css('margin','auto').css('text-align', 'center');
+        // $('#cardh1').css('padding-top','-1px') 
 
-      })
+      });
 
     });
   </script>
@@ -39,13 +48,13 @@
   <h1>Business Card Generator</h1>
 
   Name of company: <input id="company" placeholder="ex: Microsoft"><br>
-  Adress: <input id="address" placeholder="ex: 21 Jump St"><br>
+  Address: <input id="address" placeholder="ex: 21 Jump St"><br>
   Name: <input id="name" placeholder="ex: John Doe"><br>
   Number: <input id="number" placeholder="ex:347-638-nevagonhappen"><br>
   Color of text: <input id="colorT" placeholder="white"><br> 
   Color of background: <input id="colorB" placeholder="ex: pink"><br>
   Link to an image: <input id="link" placeholder="ex:www.some.thing/"><br>
-  <select>
+  <select id="font">
     <option value="Impact">Impact</option>
     <option value="Arial">Arial</option>
     <option value="Helvetica">Helvetica</option>
@@ -67,21 +76,17 @@
   <button>Generate My business card</button>
 
   <div id="front">
-
-    <h1></h1>
-    <div id="img"></div>
+<div id="header"> <h1 id="cardh1"></h1></div>
+    
+    <div id="img">  </div>
+    <p id='p1'></p>
     
 
-    <p id='p1'></p>
+   
 
   </div>
 
-  <div id="back">
-
-  </div>
-
-
-  <p id='p2'></p>
+ 
 
 
 
@@ -90,3 +95,6 @@
 </body>
 
 </html>
+
+
+<!--.css('width', '50px').css('height', '50px')-->
