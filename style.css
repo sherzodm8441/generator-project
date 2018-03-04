@@ -25,6 +25,7 @@ h1{
     width:400px;
     height:50px;
     display:block;
+    
 }
 #floatRight {
     width:200px;
@@ -45,9 +46,9 @@ h1{
     float:right;
    
 }
-/*div {*/
-/*    border:1px dashed red; */
-/*}*/
+div {
+    border:1px dashed red; 
+}
 p {
     word-wrap:break-word;
 }
@@ -56,15 +57,15 @@ p {
 }
 #indicator {
     text-align:center;
-    font-size:75%;
+    font-size:50%
 }
 #indicator0 {
     text-align:center;
-    font-size:75%;
+    font-size:50%;
 }
 #indicator1 {
     text-align:center;
-    font-size:75%;
+    font-size:50%;
 }
 .number {
     text-align: center;
