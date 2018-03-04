@@ -46,9 +46,9 @@ h1{
     float:right;
    
 }
-div {
-    border:1px dashed red; 
-}
+/*div {*/
+/*    border:1px dashed red; */
+/*}*/
 p {
     word-wrap:break-word;
 }
