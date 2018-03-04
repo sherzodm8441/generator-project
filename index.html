@@ -14,29 +14,36 @@
 
         var company = $('#company').val();
         var address = $('#address').val();
-        var name = $('name').val();
+        var name = $('#name').val();
         var number = $('#number').val();
         var textColor = $('#colorT').val();
         var backgroundColor = $('#colorB').val();
         var link = $('#link').val();
-        
+
         var link1 = "url(" + link + ")"
         var font = $('#font').val();
         var textSize = (25 - (company.length * .5)) + "px"
-        
+
 
         $('#front').css('background-color', backgroundColor);
         $('#front').css('color', textColor);
         $('#front').css('font-family', font);
-         $('#front').css('font-size', '3vw');
-         
-         $('#header').css('font-size', textSize);
-        
-        
+        $('#front').css('font-size', '3vw');
+
+        $('#header').css('font-size', textSize);
+
+
         $('#img').css('background-image', link1).css('background-size', 'cover').css('background-position', 'center').css('max-width', '50px').css('max-height', '50px');
+
+        $('#cardh1').html(company).css('margin', 'auto').css('text-align', 'center');
+        // $('#cardh1').css('padding-top','-1px')
+        $('.address').html(address);
+        $('.name').html(name).css('margin-top','-15px');
+        $('.number').html(number).css('margin-top','-15px');
+        $('#indicator').html("Address:");
+        $('#indicator0').html("Name:");
+        $('#indicator1').html("NUmber:");
         
-        $('#cardh1').html(company).css('margin','auto').css('text-align', 'center');
-        // $('#cardh1').css('padding-top','-1px') 
 
       });
 
@@ -47,13 +54,7 @@
 <body>
   <h1>Business Card Generator</h1>
 
-  Name of company: <input id="company" placeholder="ex: Microsoft"><br>
-  Address: <input id="address" placeholder="ex: 21 Jump St"><br>
-  Name: <input id="name" placeholder="ex: John Doe"><br>
-  Number: <input id="number" placeholder="ex:347-638-nevagonhappen"><br>
-  Color of text: <input id="colorT" placeholder="white"><br> 
-  Color of background: <input id="colorB" placeholder="ex: pink"><br>
-  Link to an image: <input id="link" placeholder="ex:www.some.thing/"><br>
+  Name of company: <input id="company" placeholder="ex: Microsoft"><br> Address: <input id="address" placeholder="ex: 21 Jump St"><br> Name: <input id="name" placeholder="ex: John Doe"><br> Number: <input id="number" placeholder="ex:347-638-nevagonhappen"><br>  Color of text: <input id="colorT" placeholder="white"><br> Color of background: <input id="colorB" placeholder="ex: pink"><br> Link to an image: <input id="link" placeholder="ex:www.some.thing/"><br>
   <select id="font">
     <option value="Impact">Impact</option>
     <option value="Arial">Arial</option>
@@ -71,22 +72,51 @@
     <option value="Trebuchet MS">Trebuchet MS</option>
     <option value="Arial Black">Arial Black</option>
     
-  </select> 
-  
+  </select>
+
   <button>Generate My business card</button>
 
   <div id="front">
-<div id="header"> <h1 id="cardh1"></h1></div>
+
+
+
+
+    <div id="header">
+      <h1 id="cardh1"></h1>
     
-    <div id="img">  </div>
-    <p id='p1'></p>
+    </div>
+    
+    
+<div id="img"> </div>
+    <div id="floatRight">
+      <p id="indicator"></p>
+<p class="address"></p>
+    </div>
+    
     
 
-   
+    <div id="middle">
+<p id="indicator0"></p>
+<p class="name"></p>
+    </div>
+    
+    
+    
+    <div id ="bottom">
+      <p id="indicator1"></p>
+      <p class="number"></p>
+    </div>
+
+
+
+
+
+
+
 
   </div>
 
- 
+
 
 
 
